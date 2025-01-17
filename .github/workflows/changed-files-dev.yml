@@ -1,4 +1,4 @@
-name: Changed files test
+name: Changed files DEV
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  test-changed:
+  test-changed-dev:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
