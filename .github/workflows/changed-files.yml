@@ -15,9 +15,9 @@ jobs:
         uses: tj-actions/changed-files@v45
       - name: List detected changed files
         env:
-          CHANGED: ${{ steps.changed-files.outputs.all_changed_files  }}
+          CHANGED: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          for filename in ${ALL_CHANGED_FILES}  ; do
+          for filename in ${CHANGED}  ; do
             echo "$filename was changed"
             echo "::notice title=Updated::${filename}"
           done
