@@ -1,5 +1,7 @@
 name: Changed files DEV
 
+# This will act on changed files in any push (except to master) and on
+# pull request tests.
 on:
   push:
     branches-ignore:
@@ -17,7 +19,7 @@ jobs:
           fetch-depth: 0   # needed for 'on: push'
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v45
+        uses: tj-actions/changed-files@v45  # use full hash
         with:
           files: |
             dir/*.yml
