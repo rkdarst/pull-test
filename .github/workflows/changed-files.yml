@@ -1,7 +1,12 @@
 name: Changed files test
 
 on:
-  push
+  push:
+    branches-ignore:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   test-changed:
